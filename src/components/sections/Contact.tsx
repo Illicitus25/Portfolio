@@ -189,13 +189,6 @@ const Contact = () => {
                   </a>
                 </div>
                 
-                <a 
-                  href="#" 
-                  className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-light dark:bg-highlight dark:hover:bg-highlight-light text-light font-medium rounded-lg transition-colors"
-                >
-                  <Download size={18} />
-                  Download Resume
-                </a>
               </div>
             </div>
           </div>
