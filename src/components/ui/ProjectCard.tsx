@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -8,6 +8,7 @@ interface Project {
   category: 'ml' | 'android';
   technologies: string[];
   image: string;
+  github?: string;
 }
 
 interface ProjectCardProps {
@@ -38,18 +39,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           
           <div className="flex space-x-3">
             <a 
-              href="#" 
+              href={project.github}
+              target="_blank" 
+              rel="noopener noreferrer"
               className="p-2 bg-light/20 hover:bg-light/40 rounded-full backdrop-blur-sm transition-colors"
               aria-label="View Code"
             >
               <Github size={18} className="text-light" />
-            </a>
-            <a 
-              href="#" 
-              className="p-2 bg-light/20 hover:bg-light/40 rounded-full backdrop-blur-sm transition-colors"
-              aria-label="View Project"
-            >
-              <ExternalLink size={18} className="text-light" />
             </a>
           </div>
         </div>
